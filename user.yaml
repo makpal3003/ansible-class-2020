@@ -5,7 +5,13 @@
   user: centos
   hosts: all
   tasks: 
-  - name: User add 
+  - name: User add bob
     user:
      name: bob
      state: present
+
+  - name: User add lisa 
+    user:
+     name: lisa
+     state: present
+     

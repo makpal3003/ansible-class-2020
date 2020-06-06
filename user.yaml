@@ -8,10 +8,9 @@
   - name: User add bob
     user:
      name: bob
-     state: present
+     state: absent
 
   - name: User add lisa 
     user:
      name: lisa
-     state: present
-     
+     state: absent

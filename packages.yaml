@@ -5,7 +5,7 @@
   user: centos
   hosts: all
   tasks: 
-  - name: Install telnet
+  - name: Installing packages
     package:
       name: "{{item}}"
       state: present

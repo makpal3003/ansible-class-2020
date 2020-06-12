@@ -16,3 +16,18 @@
     package:
       name: ncpa
       state: latest  
+
+
+- name: Change a line
+      lineinfile:
+        path: /usr/local/ncpa/etc/ncpa.cfg
+        regexp: '^community_string'
+        line: 'community_string = Str0ngT0k3n1'
+      notify: RESTART_NCPA
+      
+      
+handlers: 
+    - name: RESTART_NCPA
+      systemd:
+        name: ncpa_listener
+        state: restarted      
